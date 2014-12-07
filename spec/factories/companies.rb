@@ -3,7 +3,6 @@ FactoryGirl.define do
     name "MyString"
     product "MyString"
     size ""
-    location "MyString"
     website "MyString"
     logo "MyString"
   end
