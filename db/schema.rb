@@ -11,20 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207074127) do
+ActiveRecord::Schema.define(version: 20141207230500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "companies", force: true do |t|
     t.string   "name"
-    t.string   "product"
     t.integer  "size"
-    t.string   "location"
     t.string   "website"
     t.string   "logo"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "angellist_company_id"
+    t.hstore   "markets"
+    t.string   "thumbnail"
+    t.text     "description"
+    t.text     "concept"
   end
 
   create_table "jobs", force: true do |t|
@@ -35,6 +39,7 @@ ActiveRecord::Schema.define(version: 20141207074127) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "company_id"
+    t.integer  "angellist_job_id"
   end
 
   add_index "jobs", ["company_id"], name: "index_jobs_on_company_id", using: :btree
