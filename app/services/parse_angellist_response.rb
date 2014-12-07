@@ -9,11 +9,13 @@ class ParseAngellistResponse < ActiveRecord::Base
       company_ids << { angellist_company_id: job['startup']['id'] }
     end
     company_data_dump = fetch_company_details(company_ids)
+    #Problem: only fetching data for one company
+    parsed_company_data = parse_company_data(company_data_dump)
 
-    parse_company_data(company_data_dump)
-    # create companies
-    # parse job data
-    # create jobs
+    # TODO add index on angellist_id
+    # When rake task runs, it will check database to see if the id exists
+    # before proceeding
+
   end
 
   def self.fetch_company_details(company_ids)
@@ -21,6 +23,7 @@ class ParseAngellistResponse < ActiveRecord::Base
     company_ids.each do |company|
       detailed_company_data << pull_company_details_from_angellist(company[:angellist_company_id])
     end
+    # Returns detailed data for each angellist_company_id
     detailed_company_data
   end
 
@@ -33,16 +36,15 @@ class ParseAngellistResponse < ActiveRecord::Base
     company_data_dump.each do |company| 
       company_profiles << 
       {
-        angellist_company_id: company[:id],
-        name: company[:name],
-        product: company[:product],
-        description: company[:product_desc],
-        concept: company[:high_concept],
-        size: company[:company_size],
-        market: company[:markets],
-        website_url: company[:company_url],
-        logo_url: company[:logo_url],
-        thumbnail_url: company[:thumb_url]
+        angellist_company_id: company['id'],
+        name: company['name'],
+        description: company['product_desc'],
+        concept: company['high_concept'],
+        size: company['company_size'],
+        markets: company['markets'],
+        website_url: company['company_url'],
+        logo_url: company['logo_url'],
+        thumbnail_url: company['thumb_url']
       }
     end
     company_profiles

@@ -4,7 +4,6 @@ describe Company do
 
   it { should respond_to(:angellist_company_id) }
   it { should respond_to(:name) }
-  it { should respond_to(:product) }
   it { should respond_to(:description) }
   it { should respond_to(:concept) }
   it { should respond_to(:size) }
