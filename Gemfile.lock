@@ -268,6 +268,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   meta_request
+  minitest
   pg
   quiet_assets
   rack-mini-profiler
