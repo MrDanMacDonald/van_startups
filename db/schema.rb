@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207230500) do
+ActiveRecord::Schema.define(version: 20141208010216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,17 +19,19 @@ ActiveRecord::Schema.define(version: 20141207230500) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
-    t.integer  "size"
+    t.string   "size"
     t.string   "website"
     t.string   "logo"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "angellist_company_id"
-    t.hstore   "markets"
     t.string   "thumbnail"
     t.text     "description"
     t.text     "concept"
+    t.json     "markets"
   end
+
+  add_index "companies", ["angellist_company_id"], name: "index_companies_on_angellist_company_id", using: :btree
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -42,6 +44,7 @@ ActiveRecord::Schema.define(version: 20141207230500) do
     t.integer  "angellist_job_id"
   end
 
+  add_index "jobs", ["angellist_job_id"], name: "index_jobs_on_angellist_job_id", using: :btree
   add_index "jobs", ["company_id"], name: "index_jobs_on_company_id", using: :btree
 
 end

@@ -93,13 +93,13 @@ describe ParseAngellistResponse do
     {"id"=>2462, "tag_type"=>"MarketTag", "name"=>"internet of things", "display_name"=>"Internet of Things", "angellist_url"=>"https://angel.co/internet-of-things"}]
     end
     it 'should retrieve the company website' do 
-      expect(@parsed_company_data[0][:website_url]).to eq 'https://linquet.com'
+      expect(@parsed_company_data[0][:website]).to eq 'https://linquet.com'
     end
-    it 'should retrieve the company logo_url' do
-      expect(@parsed_company_data[0][:logo_url]).to eq 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/3806-e2580ede2fb3c4b5d04d86ae51216c33-medium_jpg.jpg?buster=1360784555'
+    it 'should retrieve the company logo' do
+      expect(@parsed_company_data[0][:logo]).to eq 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/3806-e2580ede2fb3c4b5d04d86ae51216c33-medium_jpg.jpg?buster=1360784555'
     end
-    it 'should retrieve the company thumbnail_url' do
-      expect(@parsed_company_data[0][:thumbnail_url]).to eq 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/3806-e2580ede2fb3c4b5d04d86ae51216c33-thumb_jpg.jpg?buster=1360784555'
+    it 'should retrieve the company thumbnail' do
+      expect(@parsed_company_data[0][:thumbnail]).to eq 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/3806-e2580ede2fb3c4b5d04d86ae51216c33-thumb_jpg.jpg?buster=1360784555'
     end
   end
 end
