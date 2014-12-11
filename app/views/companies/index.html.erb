@@ -1,0 +1,24 @@
+<%= javascript_include_tag 'table' %>
+<table id='companiesTable' class="table table-striped">
+  <thead>
+  <th>Name</th>
+  <th>Product</th>
+  <th>Markets</th>
+  <th>Size</th>
+  <th>Hiring</th>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+    <tr>
+    <td><%= image_tag company.thumbnail %></td>
+    <td><%= company.concept %></td>
+    <td>
+      <% company.markets.each do |market| %>
+        <%= market[:name] %>
+      <% end %>
+    </td>
+    <td><%= company.size %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
