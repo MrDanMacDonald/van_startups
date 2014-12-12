@@ -1,4 +1,3 @@
-<%= javascript_include_tag 'table' %>
 <table id='companiesTable' class="table table-striped">
   <thead>
   <th>Name</th>
@@ -22,3 +21,8 @@
     <% end %>
   </tbody>
 </table>
+<script>
+$(document).ready(function(){
+    $('#companiesTable').dataTable();
+});
+</script>
