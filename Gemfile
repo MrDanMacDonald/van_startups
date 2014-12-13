@@ -22,7 +22,6 @@ group :development do
   gem 'meta_request'
   gem 'rubocop', require: false
   gem 'bullet'
-  gem 'rack-mini-profiler'
 end
 
 group :test do
