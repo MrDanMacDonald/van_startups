@@ -1,5 +1,8 @@
-<table id='companiesTable' class='table' cellspacing='0' width='60%'data-source='<%= companies_url(format: 'json') %>'%>
+<table id='companiesTable' class='table' cellspacing='0' width='60%'%>
+<!-- <table id='companiesTable' class='table' cellspacing='0' width='60%'data-source='<%= companies_url(format: 'json') %>'%> -->
+
   <thead>
+<!--   How to define the data for each of the columns? -->
   <th class='col-md-1'>Name</th>
   <th class='col-md-3'>Product</th>
   <th class='col-md-5'>Markets</th>
@@ -9,7 +12,14 @@
   <tbody>
     <% @companies.each do |company| %>
     <tr>
-    <td><%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %></td>
+    <td>
+      <span class='hidden'>
+        <%= company.name %>
+      </span>
+      <span>
+        <%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %>
+      </span>
+    </td>
     <td><%= company.concept %></td>
     <td>
       <% company.market_names.each do |market| %>
