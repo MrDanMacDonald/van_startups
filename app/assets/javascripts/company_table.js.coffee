@@ -2,7 +2,8 @@ jQuery ->
   $(document).ready ->
     $('#companiesTable').dataTable
       paging: false,
-      bInfo: false
+      bInfo: false,
+      bfilter: false
 
 # TODO: For customization of column definitions, use ajax 
 
