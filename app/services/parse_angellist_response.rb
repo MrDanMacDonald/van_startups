@@ -10,6 +10,7 @@ class ParseAngellistResponse < ActiveRecord::Base
     end
     company_data_dump = fetch_company_details(company_ids)
     parsed_company_data = parse_company_data(company_data_dump)
+    parsed_job_data = parse_job_data(data)
     CreateCompaniesFromParsedData.call(parsed_company_data)
   end
 
@@ -42,6 +43,10 @@ class ParseAngellistResponse < ActiveRecord::Base
       }
     end
     company_profiles
+  end
+
+  def self.parse_job_data(job_data)
+    
   end
 end
 

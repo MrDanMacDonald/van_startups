@@ -3,6 +3,7 @@ FactoryGirl.define do
     title 'MyString'
     salary 1
     equity 'MyString'
-    job_type 'MyString'
+    role_type 'MyString'
+    skill_type 'MyString'
   end
 end
