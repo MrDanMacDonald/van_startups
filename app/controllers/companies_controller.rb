@@ -1,5 +1,4 @@
 class CompaniesController < ApplicationController
-
   def index
     @companies = Company.all
     respond_to do |format|

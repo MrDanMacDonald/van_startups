@@ -5,5 +5,6 @@ FactoryGirl.define do
     equity 'MyString'
     role_type 'MyString'
     skill_type 'MyString'
+    job_type 'MyString'
   end
 end
