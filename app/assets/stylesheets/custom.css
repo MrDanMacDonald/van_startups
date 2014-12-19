@@ -22,6 +22,10 @@
   background-color: #9A28CF;
 }
 
+.hidden {
+  display: none;
+}
+
 #companiesTable {
   border-bottom: none;
   font-weight: 200;
@@ -30,5 +34,3 @@
 #companiesTable thead tr th {
   border-bottom: none;
 }
-
-

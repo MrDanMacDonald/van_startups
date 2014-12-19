@@ -9,7 +9,14 @@
   <tbody>
     <% @companies.each do |company| %>
     <tr>
-    <td><%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %></td>
+    <td>
+      <span class='hidden'>
+        <%= company.name %>
+      </span>
+      <span>
+        <%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %>
+      </span>
+    </td>
     <td><%= company.concept %></td>
     <td>
       <% company.market_names.each do |market| %>
@@ -29,4 +36,3 @@
     <% end %>
   </tbody>
 </table>
-

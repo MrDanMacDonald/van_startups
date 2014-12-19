@@ -23,5 +23,5 @@ set :output, "#{path}/log/cron.log"
 
 # TODO: Store location_tag id in yml and pass as arg to the rake task
 every 24.hours do 
-  rake 'jobs:update_jobs'
+  rake 'companies:update_companies'
 end

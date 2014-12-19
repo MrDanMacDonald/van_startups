@@ -4,6 +4,10 @@ describe ParseAngellistResponse do
 
   let(:angellist_id) { 3806 }
 
+  let(:job_data_dump) {
+    
+  }
+
   let(:company_data_dump) { [{"id"=>3806,
   "hidden"=>false,
   "community_profile"=>false,
@@ -65,6 +69,10 @@ describe ParseAngellistResponse do
 
   it 'should respond to ::parse_company_data' do 
     expect(ParseAngellistResponse).to respond_to(:parse_company_data)
+  end
+
+  it 'should respond to ::parse_job_data' do
+    expect(ParseAngellistResponse).to respond_to(:parse_job_data)
   end
 
   describe '#parse_company_data' do
