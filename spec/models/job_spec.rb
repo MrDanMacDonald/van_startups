@@ -13,18 +13,11 @@ describe Job do
 
   it { should belong_to(:company) }
 
-  let(:job) { FactoryGirl.build(:job) }
+  let(:company) { FactoryGirl.create(:company) }
+  let(:job) { FactoryGirl.create(:job, company: company) }
 
   subject { job }
 
+  it { should validate_presence_of(:company_id) }
   it { should be_valid }
-
-  describe 'validations' do 
-    it 'validates presence of company_id' do
-    end
-    it 'validates presence of angellist_job_id' do 
-    end
-    it 'validates presence of title' do
-    end
-  end
 end
