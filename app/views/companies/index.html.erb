@@ -9,29 +9,32 @@
   <tbody>
     <% @companies.each do |company| %>
     <tr>
-    <td>
-      <span class='hidden'>
-        <%= company.name %>
-      </span>
-      <span>
-        <%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %>
-      </span>
-    </td>
-    <td><%= company.concept %></td>
-    <td>
-      <% company.market_names.each do |market| %>
-        <span class="company market">
-          <%= market.split.map(&:capitalize).join(' ') %>
+      <td>
+        <span class='hidden'>
+          <%= company.name %>
         </span>
-      <% end %>
-    </td>
-    <td>
-      <span class='company size'>
-        <%= company.size %>
-      <span>
-    </td
-    <td>
-    </td>
+        <span>
+          <%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %>
+        </span>
+      </td>
+      <td><%= company.concept %></td>
+      <td>
+        <% company.market_names.each do |market| %>
+          <span class='company market'>
+            <%= market.split.map(&:capitalize).join(' ') %>
+          </span>
+        <% end %>
+      </td>
+      <td>
+        <span class='company size'>
+          <%= company.size %>
+        </span>
+      </td>
+      <td>
+        <span class='company size'>
+          <%= company.jobs.size %>
+        </span>
+      </td>
     </tr>
     <% end %>
   </tbody>

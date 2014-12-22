@@ -3,7 +3,6 @@ class ParseAngellistResponse < ActiveRecord::Base
   # TODO: refactor into worker
 
   def self.call(data)
-    binding.pry
     company_ids = []
     data['jobs'].each do |job|
       company_ids << { angellist_company_id: job['startup']['id'] }
