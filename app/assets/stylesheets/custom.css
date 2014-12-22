@@ -16,24 +16,30 @@
   border-radius: 3px;
   color: #FFF;
 } .market {
-    background-color: #1F9ED8;
+    background-color: #2196F3;
 } .size {
-  background-color: #75B500;
+  background-color: #8BC34A;
 } .jobs {
-  background-color: #9A28CF;
+  background-color: #FF5722;
 }
 
 .hidden {
   display: none;
 }
 
-#logo {
-  height: 50px;
-  width: 50px;
-  content: "V";
+.circle {
+  height: 70px;
+  width: 70px;
+  padding: 15px;
   border-radius: 50%;
-  background-color: #18bc9c;
+  background-color: #ff5722;
   color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  margin: 1em 1em 1em 1em;
 }
 
 #companiesTable {
