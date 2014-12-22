@@ -12,5 +12,4 @@ namespace :jobs do
 
     ParseAngellistResponse.call(response)
   end
-
 end

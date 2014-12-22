@@ -1,10 +1,10 @@
-<table id='companiesTable' class='table' cellspacing='0' width='60%'%>
+<table id='companiesTable' class='table' cellspacing='0' width='55%'%>
   <thead>
   <th class='col-md-1'>Name</th>
-  <th class='col-md-3'>Product</th>
-  <th class='col-md-5'>Markets</th>
+  <th class='col-md-2'>Product</th>
+  <th class='col-md-4'>Markets</th>
   <th class='col-md-2'>Size</th>
-  <th class='col-md-1'>Hiring</th>
+  <th class='col-md-3'>Hiring</th>
   </thead>
   <tbody>
     <% @companies.each do |company| %>
@@ -20,20 +20,25 @@
       <td><%= company.concept %></td>
       <td>
         <% company.market_names.each do |market| %>
-          <span class='company market'>
+          <div class='company market'>
             <%= market.split.map(&:capitalize).join(' ') %>
-          </span>
+          </div>
         <% end %>
       </td>
       <td>
-        <span class='company size'>
+        <div class='company size'>
           <%= company.size %>
-        </span>
+        </div>
       </td>
       <td>
-        <span class='company size'>
-          <%= company.jobs.size %>
+        <span class='hidden'>
+          <%= company.jobs.count %>
         </span>
+        <% company.jobs.each do |job| %>
+          <div class='company jobs'>
+            <%= job.title.split.map(&:capitalize).join(' ') %>
+          </div>
+        <% end %>
       </td>
     </tr>
     <% end %>

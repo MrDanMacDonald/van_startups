@@ -9,8 +9,9 @@
 }
 
 .company {
+  display: inline-block;
   padding: .2em .6em .3em;
-  margin: 2em .2em .0em 0em;
+  margin: 0em .2em .2em 0em;
   font-weight: 100;
   border-radius: 3px;
   color: #FFF;
@@ -18,12 +19,21 @@
     background-color: #1F9ED8;
 } .size {
   background-color: #75B500;
-} .hiring {
+} .jobs {
   background-color: #9A28CF;
 }
 
 .hidden {
   display: none;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  content: "V";
+  border-radius: 50%;
+  background-color: #18bc9c;
+  color: white;
 }
 
 #companiesTable {
