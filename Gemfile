@@ -15,6 +15,7 @@ gem 'sidekiq'
 gem 'whenever', require: false
 gem 'httparty'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-material-design'
 gem 'draper'
 
 group :development do
