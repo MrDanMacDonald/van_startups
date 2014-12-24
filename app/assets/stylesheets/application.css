@@ -12,6 +12,5 @@
 *
 *= require_self
 *= require twitter-bootstrap-static/bootstrap
-*= require bootstrap-material-design
 *= require_tree .
 */
