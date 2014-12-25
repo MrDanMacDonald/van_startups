@@ -1,12 +1,10 @@
+// TODO: Refactor wit SASS
+
 body {
   background-color: #ffffff;
 }
 
-th {
-  font-family: 'Open Sans', sans-serif;
-  color: #455A64;
-}
-
+/*Navbar*/
 .navbar {
   background-color: #ffffff;
   box-shadow: 0px 1px 0px 0px #ebebeb, 0px 1px 2px 0px #EEEEEE;
@@ -14,7 +12,7 @@ th {
   border: none;
 }
 
-.nav.navbar-nav {
+.nav.navbar-nav.top {
   float: right;
   margin-top: 9px;
 }
@@ -28,24 +26,76 @@ th {
 }
 
 .nav.navbar-nav>li>a:hover {
-  color:#ff5722;
+  color: #ff5722;
 }
 
+/*Logo*/
 .container.brand {
   max-width: 55%;
 }
 
+.circle {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ff5722;
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: .3em .0em .3em .0em;
+  display: inline-block;
+}
+
+#page_name {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #BDBDBD;
+  padding-left: .5em;
+}
+
+/*Quote*/
 .quote {
   float: left;
   margin: 25px 0 10px 0;
 }
 
+#front_quote {
+  font-style: italic;
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  color: #455A64;
+}
+
+#quote_source {
+  font-family: 'Vollkorn', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ff5722;
+}
+
+/*Table*/
 .container.table {
   max-width: 55%
 }
+
+th {
+  font-family: 'Open Sans', sans-serif;
+  color: #455A64;
+}
+
+/*Search Box*/
 .search_box {
   float: right;
   font-family: 'Open Sans', sans-serif;
+  margin: 10px 0px 10px 0px;
 }
 
 .search_box label {
@@ -62,6 +112,7 @@ th {
   padding: 0;
 }
 
+/*Table Contents*/
 .company {
   display: inline-block;
   padding: .2em .6em .3em;
@@ -81,39 +132,6 @@ th {
   display: none;
 }
 
-.circle {
-  height: 50px;
-  width: 50px;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: #ff5722;
-  color: white;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: bold;
-  margin: .3em .0em .3em .0em;
-  display: inline-block;
-}
-
-#front_quote {
-  font-style: italic;
-  font-family: 'Vollkorn', serif;
-  font-weight: 400;
-  color: #455A64;
-}
-
-#quote_source {
-  font-family: 'Vollkorn', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-indent: -13px;
-  color: #BF360C;
-}
-
 #companiesTable {
   border-bottom: none;
   font-weight: 200;
@@ -125,11 +143,15 @@ th {
   border-bottom: none;
 }
 
-#page_name {
-  display: inline;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: #BDBDBD;
-  padding-left: .5em;
+/*Footer*/
+
+#footer {
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px #ebebeb, 1px 1px 2px 1px #EEEEEE;
+  border-radius: 0px;
+  border: none;
+}
+
+.nav.navbar-nav.bottom {
 }
