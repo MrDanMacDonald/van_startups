@@ -24,17 +24,12 @@ body {
   color: #BDBDBD;
   background-color: #ffffff;
   font-size: 1.2em;
-}
-
-.nav.navbar-nav>li>a:hover {
-  color: #ff5722;
+  &:hover {
+    color: #ff5722;
+  }
 }
 
 /*Logo*/
-
-.container.header_content {
-  max-width: 55%;
-}
 
 .circle {
   height: 50px;
@@ -52,7 +47,7 @@ body {
   display: inline-block;
 }
 
-#page_name {
+#page_name_header {
   display: inline;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -86,10 +81,6 @@ body {
 
 /*Table*/
 
-.container.table {
-  max-width: 55%
-}
-
 th {
   font-family: 'Open Sans', sans-serif;
   color: #455A64;
@@ -122,7 +113,7 @@ th {
 .company {
   display: inline-block;
   padding: .2em .6em .3em;
-  margin: 0em .2em .2em 0em;
+  margin: .2em .2em .2em 0em;
   font-weight: 100;
   border-radius: 3px;
   color: #FFF;
@@ -152,23 +143,39 @@ th {
 /*Footer*/
 
 #footer {
-  height: 125px;
+  height: 145px;
+  margin: 40px 0px 0px 0px;
   background-color: #ffffff;
   box-shadow: 1px 1px 1px 1px #ebebeb, 1px 1px 2px 1px #EEEEEE;
   border-radius: 0px;
   border: none;
 }
 
+.footer {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
 .contact {
-  margin: 21px 10px 0px 10px;
   font-family: 'Open Sans', sans-serif;
   color: #BDBDBD;
   background-color: #ffffff;
   font-size: 1.2em;
+  padding: 21px 10px 0px 0px;
+}
+
+.nav.contact>li>a {
+  display: inline-block;
+  border: none;
+  background-color: #009688;
+  border-bottom: 5px solid #00796B;
+  &:hover {
+    box-shadow: 0 6px 10px #9e9e9e, 0 10px 30px #cfcfcf;
+  }
 }
 
 #footer-left {
-  padding: 0px 0px 0px 0px;
+  padding: 0px 15px 0px 15px;
 }
 
 #footer-right {
@@ -179,6 +186,10 @@ th {
   padding: 21px 10px 10px 0px;
 }
 
-.btn-primary {
-  background-color: #2196F3;
+#page_name_footer {
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #BDBDBD;
 }
