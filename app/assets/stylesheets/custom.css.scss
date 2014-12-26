@@ -123,6 +123,9 @@ th {
   background-color: #8BC34A;
 } .jobs {
   background-color: #FF5722;
+  &:hover {
+    box-shadow: 0 6px 10px #9e9e9e, 0 10px 30px #cfcfcf;
+  }
 }
 
 .hidden {
