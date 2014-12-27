@@ -1,0 +1,36 @@
+<div class='row'>
+  <div class='col-md-3'>
+  </div>
+  <div class='col-md-6'>
+    <%= render 'layouts/quote' %>
+    <table id='companiesTable' class='table' cellspacing='0' width='100%'%>
+      <thead>
+      <th class='col-md-3'>Title</th>
+      <th class='col-md-2'>Role Type</th>
+      <th class='col-md-2'>Skill Type</th>
+      <th class='col-md-2'>Salary</th>
+      <th class='col-md-2'>Equity</th>
+      </thead>
+      <tbody>
+        <% @jobs.each do |job| %>
+          <tr>
+            <td>
+              <span class='hidden'>
+                <%= job.title %>
+              </span>
+              <p id='job_title'>
+               <%= job.decorate.job_title %>
+              </p>
+            </td>
+            <td><%= job.decorate.job_role_type %></td>
+            <td><%= job.decorate.job_skill_type %></td>
+            <td><%= job.decorate.job_salary %></td>
+            <td><%= job.decorate.job_equity %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class='col-md-3'>
+  </div>
+</div>

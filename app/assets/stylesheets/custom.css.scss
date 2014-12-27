@@ -1,11 +1,10 @@
-// TODO: Refactor wit SASS
+// TODO: DRY Up
 
 body {
   background-color: #ffffff;
 }
 
-/*Navbar*/
-
+// Navbar
 .navbar {
   background-color: #ffffff;
   box-shadow: 0px 1px 0px 0px #ebebeb, 0px 1px 2px 0px #EEEEEE;
@@ -29,8 +28,7 @@ body {
   }
 }
 
-/*Logo*/
-
+// Logo
 .circle {
   height: 50px;
   width: 50px;
@@ -45,6 +43,10 @@ body {
   font-weight: bold;
   margin: .3em .0em .3em .0em;
   display: inline-block;
+  &:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
 
 #page_name_header {
@@ -54,10 +56,12 @@ body {
   font-size: 20px;
   color: #BDBDBD;
   padding-left: .5em;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-/*Quote*/
-
+// Quote
 .quote {
   float: left;
   margin: 25px 0 10px 0;
@@ -79,15 +83,13 @@ body {
   color: #ff5722;
 }
 
-/*Table*/
-
+// Table
 th {
   font-family: 'Open Sans', sans-serif;
   color: #455A64;
 }
 
-/*Search Box*/
-
+// Search Box
 .search_box {
   float: right;
   font-family: 'Open Sans', sans-serif;
@@ -108,8 +110,17 @@ th {
   padding: 0;
 }
 
-/*Table Contents*/
+.company_logo_small {
+  max-height: 30px;
+  max-width: 30px;
+  border-radius: 3px;
+  box-shadow: rgba(0,0,0,.05) 0 1px 4px;
+  width: 100%;
+  border: 1px solid #EEE;
+  padding: 0;
+}
 
+// Company Table Contents
 .company {
   display: inline-block;
   padding: .2em .6em .3em;
@@ -128,6 +139,14 @@ th {
   }
 }
 
+.company.jobs>a {
+  color: #ffffff;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -143,8 +162,49 @@ th {
   border-bottom: none;
 }
 
-/*Footer*/
+// Job Table Contents
+.job {
+  display: inline-block;
+  padding: .2em .6em .3em;
+  margin: .2em .2em .2em 0em;
+  font-weight: 100;
+  border-radius: 3px;
+  color: #FFF;
+} .market {
+    background-color: #2196F3;
+} .size {
+  background-color: #8BC34A;
+} .jobs {
+  background-color: #FF5722;
+  &:hover {
+    box-shadow: 0 6px 10px #9e9e9e, 0 10px 30px #cfcfcf;
+  }
+}
 
+.job.jobs>a {
+  color: #ffffff;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#companiesTable {
+  border-bottom: none;
+  font-weight: 200;
+  border-top-color: #ebebeb;
+  border-width: 1px;
+}
+
+#companiesTable thead tr th {
+  border-bottom: none;
+}
+
+// Footer
 #footer {
   height: 145px;
   margin: 40px 0px 0px 0px;
