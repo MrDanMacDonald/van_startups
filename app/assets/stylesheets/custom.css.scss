@@ -101,6 +101,8 @@ th {
 }
 
 .company_logo {
+  float: left;
+  overflow: hidden;
   max-height: 45px;
   max-width: 45px;
   border-radius: 5px;
@@ -110,15 +112,15 @@ th {
   padding: 0;
 }
 
-.company_logo_small {
-  max-height: 30px;
-  max-width: 30px;
-  border-radius: 3px;
-  box-shadow: rgba(0,0,0,.05) 0 1px 4px;
-  width: 100%;
-  border: 1px solid #EEE;
-  padding: 0;
-}
+// .company_logo_small {
+//   max-height: 30px;
+//   max-width: 30px;
+//   border-radius: 3px;
+//   box-shadow: rgba(0,0,0,.05) 0 1px 4px;
+//   width: 100%;
+//   border: 1px solid #EEE;
+//   padding: 0;
+// }
 
 // Company Table Contents
 .company {
@@ -170,16 +172,28 @@ th {
   font-weight: 100;
   border-radius: 3px;
   color: #FFF;
-} .market {
-    background-color: #2196F3;
-} .size {
-  background-color: #8BC34A;
-} .jobs {
-  background-color: #FF5722;
-  &:hover {
-    box-shadow: 0 6px 10px #9e9e9e, 0 10px 30px #cfcfcf;
-  }
+} .role_type {
+    background-color: #FF9800;
+} .skill_type {
+  background-color: #607D8B;
+} .salary {
+  background-color: #FF4081;
+} .equity {
+  background-color: #009688;
 }
+
+#job_company_name {
+  font-family: 'Open Sans', sans-serif;
+  color: #455A64;
+}
+
+.job_display_title {
+  float: left;
+}
+
+  // &:hover {
+  //   box-shadow: 0 6px 10px #9e9e9e, 0 10px 30px #cfcfcf;
+  // }
 
 .job.jobs>a {
   color: #ffffff;

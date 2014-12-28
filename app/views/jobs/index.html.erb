@@ -18,14 +18,36 @@
               <span class='hidden'>
                 <%= job.title %>
               </span>
-              <p id='job_title'>
-               <%= job.decorate.job_title %>
-              </p>
+              <div class='job_display_title'>
+                <%= job.decorate.job_title %>
+              </div>
             </td>
-            <td><%= job.decorate.job_role_type %></td>
-            <td><%= job.decorate.job_skill_type %></td>
-            <td><%= job.decorate.job_salary %></td>
-            <td><%= job.decorate.job_equity %></td>
+            <td>
+              <% if job.role_type %>
+                <div class='job role_type'>
+                  <%= job.decorate.job_role_type %>
+                </div>
+              <% end %>
+            </td>
+            <td>
+              <% if job.skill_type %>
+                <div class='job skill_type'>
+                  <%= job.decorate.job_skill_type %>
+                </div>
+              <% end %>
+            </td>
+            <td>
+              <div class='job salary'>
+                <%= job.decorate.job_salary %>
+              </div>
+            </td>
+            <td>
+              <% if job.equity[0] != nil %>
+                <div class='job equity'>
+                  <%= job.decorate.job_equity %>
+                </div>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>
