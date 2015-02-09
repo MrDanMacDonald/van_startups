@@ -4,15 +4,16 @@
     </div>
     <div class="col-md-6">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
 <!--         TODO: Refactor so that logo and wordmark are contained in same link_to helper -->
           <%= link_to "V", root_path, class: "circle" %>
           <%= link_to "VANCOUVER STARTUP JOBS", root_path, id: "page_name_header" %>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <ul class="nav navbar-nav top">
             <li><%= link_to "Startups", companies_path %></li>
             <li><%= link_to "Jobs", jobs_path %></li>
+<!--             <li><%= link_to "Resources", '#' %></li> -->
           </ul>
         </div>
       </div>
