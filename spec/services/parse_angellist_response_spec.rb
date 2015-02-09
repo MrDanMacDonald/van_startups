@@ -75,6 +75,14 @@ describe ParseAngellistResponse do
     expect(ParseAngellistResponse).to respond_to(:parse_job_data)
   end
 
+  it 'should respond to ::parse_role_type' do
+    expect(ParseAngellistResponse).to respond_to(:parse_role_type)
+  end
+
+  it 'should respond to ::parse_skill_type' do
+    expect(ParseAngellistResponse).to respond_to(:parse_skill_type)
+  end
+
   describe '#parse_company_data' do
     before(:each) do 
       @parsed_company_data = ParseAngellistResponse.parse_company_data(company_data_dump)
@@ -108,6 +116,25 @@ describe ParseAngellistResponse do
     end
     it 'should retrieve the company thumbnail' do
       expect(@parsed_company_data[0][:thumbnail]).to eq 'https://d1qb2nb5cznatu.cloudfront.net/startups/i/3806-e2580ede2fb3c4b5d04d86ae51216c33-thumb_jpg.jpg?buster=1360784555'
+    end
+  end
+
+  describe '#parse_job_data' do
+    it 'should retrieve the job angellist_job_id' do
+    end
+    it 'should retrieve the job angellist_company_id' do
+    end
+    it 'should retrieve the job title' do
+    end
+    it 'should retrieve the job salary' do
+    end
+    it 'should retrieve the job equity' do
+    end
+    it 'should retrieve the job role_type' do
+    end
+    it 'should retrieve the job skill_type' do
+    end
+    it 'should retrieve the job angellist_url' do
     end
   end
 end

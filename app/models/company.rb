@@ -1,7 +1,11 @@
 class Company < ActiveRecord::Base
   has_many :jobs, dependent: :destroy
 
+  def index
+    @companies = Company.includes(:jobs)
+  end
+
   def market_names
-    self.markets.map{ |market| market['name'] }
+    markets.map { |market| market['name'] }
   end
 end

@@ -15,7 +15,9 @@ gem 'sidekiq'
 gem 'whenever', require: false
 gem 'httparty'
 gem 'twitter-bootstrap-rails'
+# gem 'bootstrap-material-design'
 gem 'draper'
+gem 'shareable'
 
 group :development do
   gem 'better_errors'

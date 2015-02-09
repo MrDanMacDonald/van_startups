@@ -1,38 +1,56 @@
-<table id='companiesTable' class='table' cellspacing='0' width='60%'%>
-  <thead>
-  <th class='col-md-1'>Name</th>
-  <th class='col-md-3'>Product</th>
-  <th class='col-md-5'>Markets</th>
-  <th class='col-md-2'>Size</th>
-  <th class='col-md-1'>Hiring</th>
-  </thead>
-  <tbody>
-    <% @companies.each do |company| %>
-    <tr>
-    <td>
-      <span class='hidden'>
-        <%= company.name %>
-      </span>
-      <span>
-        <%= image_tag(company.thumbnail, class: 'company_logo', alt: company.name) %>
-      </span>
-    </td>
-    <td><%= company.concept %></td>
-    <td>
-      <% company.market_names.each do |market| %>
-        <span class="company market">
-          <%= market.split.map(&:capitalize).join(' ') %>
-        </span>
-      <% end %>
-    </td>
-    <td>
-      <span class='company size'>
-        <%= company.size %>
-      <span>
-    </td
-    <td>
-    </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class='row'>
+  <div class='col-md-3'>
+  </div>
+  <div class='col-md-6'>
+    <%= render 'layouts/quote' %>
+    <table id='companiesTable' class='table' cellspacing='0' width='100%'%>
+      <thead>
+      <th class='col-md-2'>Name</th>
+      <th class='col-md-2'>Product</th>
+      <th class='col-md-4'>Markets</th>
+      <th class='col-md-1'>Size</th>
+      <th class='col-md-3'>Hiring</th>
+      </thead>
+      <tbody>
+        <% @companies.each do |company| %>
+        <tr>
+          <td>
+            <span class='hidden'>
+              <%= company.name %>
+            </span>
+            <span>
+              <%= link_to image_tag(company.thumbnail, class: 'company_logo', alt: company.name), company.website, :target=>'_blank' %>
+            </span>
+          </td>
+          <td><%= company.concept %></td>
+          <td>
+            <% company.market_names.each do |market| %>
+              <div class='company market'>
+                <%= market.split.map(&:capitalize).join(' ') %>
+              </div>
+            <% end %>
+          </td>
+          <td>
+            <div class='company size'>
+              <%= company.size %>
+            </div>
+          </td>
+          <td>
+            <span class='hidden'>
+              <%= company.jobs.count %>
+            </span>
+            <!-- TODO: link to actual postings on company websites instead of angellist urls -->
+            <% company.jobs.each do |job| %>
+              <div class='company jobs'>
+                <%= link_to job.title.split.map(&:capitalize).join(' '), job.angellist_url, :target => "_blank" %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class='col-md-3'>
+  </div>
+</div>

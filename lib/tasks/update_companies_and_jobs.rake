@@ -1,5 +1,4 @@
 require 'httparty'
-require 'pry'
 
 namespace :jobs do
 
@@ -12,5 +11,4 @@ namespace :jobs do
 
     ParseAngellistResponse.call(response)
   end
-
 end
