@@ -6,11 +6,6 @@ class JobDecorator < Draper::Decorator
     object.title + ' at ' + object.company_name
   end
 
-  # def job_title
-  #   return unless object.title
-  #   object.title
-  # end
-
   def job_role_type
     return unless object.role_type
     object.role_type.capitalize
