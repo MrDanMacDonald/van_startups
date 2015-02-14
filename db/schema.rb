@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218173730) do
+ActiveRecord::Schema.define(version: 20150214094018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141218173730) do
     t.text     "description"
     t.text     "concept"
     t.json     "markets"
+    t.integer  "amount_raised"
   end
 
   add_index "companies", ["angellist_company_id"], name: "index_companies_on_angellist_company_id", using: :btree

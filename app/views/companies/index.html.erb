@@ -21,6 +21,7 @@
             <span>
               <%= link_to image_tag(company.thumbnail, class: 'company_logo', alt: company.name), company.website, :target=>'_blank' %>
             </span>
+            <div class="company_name"><%= company.name %></div>
           </td>
           <td><%= company.concept %></td>
           <td>
